@@ -130,7 +130,9 @@ final class HTTPClient {
 
         let info = Bundle(for: type(of: self)).infoDictionary
         let version = info?["CFBundleShortVersionString"] as? String ?? "Unknown"
-        request.setValue("lyft-mobile-sdk:ios::\(version)", forHTTPHeaderField: "User-Agent")
+        ///// TEMP: Removing user agent field since it causes the API to return 'no_service_in_area' – 'The requested location is not inside a Lyft service area'
+//        request.setValue("lyft-mobile-sdk:ios::\(version)", forHTTPHeaderField: "User-Agent")
+        /////
 
         return lyftURLEncodedInURL(request: request, parameters: parameters).0
     }

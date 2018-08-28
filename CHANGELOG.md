@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.7](https://github.com/lyft/Lyft-iOS-sdk/releases/tag/1.0.6)
 
 - Updated for Swift 4
+- Fix for 'no service in area' bug when making API calls in certain locations (ie: Canada)
 
 ## [1.0.6](https://github.com/lyft/Lyft-iOS-sdk/releases/tag/1.0.6)
 
